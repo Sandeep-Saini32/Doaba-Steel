@@ -1,11 +1,12 @@
 
 import './App.css';
-import { Router } from 'react-router-dom';
+import { Routerr } from './components/routerr';
+
 
 function App() {
   return (
 
-  <Router/>
+  <Routerr/>
   
 
   );

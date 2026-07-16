@@ -3,7 +3,7 @@ export const Landinghome=()=>{
 
 return(
 <>
-<h1>home page</h1>
+<h1>user home page</h1>
 
 </>
 

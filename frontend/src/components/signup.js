@@ -1,6 +1,9 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 export const Signup=()=>{
+
+  const navigate=useNavigate()
 
   const [name,setname]=useState("")
   const [email,setemail]=useState("")
@@ -10,11 +13,11 @@ export const Signup=()=>{
   const adduser=async(e)=>{
     e.preventDefault()
 
- const userdata={name,email,pass,cfpass}  
+ const data={name,email,pass,cfpass}  
  
  const saveuser=await fetch("http://localhost:9000/api/signup",{
 method:"post",
-body:JSON.stringify(userdata),
+body:JSON.stringify(data),
 headers:{
   "content-type":"application/json;charset=utf-8"
 }
@@ -25,6 +28,7 @@ if(saveuser.ok){
 const sv=await saveuser.json()
 if(sv.statuscode===1){
   alert("register done")
+  navigate("/login")
 }
 else{
   alert("register not done")

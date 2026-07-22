@@ -9,6 +9,7 @@ import { Product } from "./product"
 import { Order } from "./order"
 import { Shop } from "./shop"
 import { Contact } from "./contact"
+import { Customerinfo } from "./customerinfo"
 
 export const Routerr=()=>{
 
@@ -26,6 +27,7 @@ return(
 <Route path="order"element={<Order/>}/>
 <Route path="shop"element={<Shop/>}/>
 <Route path="contact"element={<Contact/>}/>
+<Route path="customerinfo"element={<Customerinfo/>}/>
 
 </Routes>
 

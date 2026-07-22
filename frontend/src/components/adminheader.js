@@ -14,9 +14,10 @@ return(
 <li><Link to={"product"}>product</Link></li>
 <li><Link to={"order"}>order</Link></li>
 <li><Link to={"login"}>login</Link></li>
-<li>customers</li>
+<li><Link to={"customerinfo"}>customers</Link></li>
 
-<li>welcome:{name}</li>
+
+<li className="barname">welcome:{name}</li>
 </ul>
 
 

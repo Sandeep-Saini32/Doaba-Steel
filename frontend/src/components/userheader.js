@@ -16,7 +16,7 @@ return(
 <li><Link to={"signup"}>signup</Link></li>
 <li><Link to={"contact"}>Contactus</Link></li>
 
-<li>welcome:{name}</li>
+<li className="barname">welcome:{name}</li>
 </ul>
 
 

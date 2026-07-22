@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 
 export const Adminheader=()=>{
 
+ const name=localStorage.getItem("name")   
 
 return(
 <>
@@ -15,8 +16,9 @@ return(
 <li><Link to={"login"}>login</Link></li>
 <li>customers</li>
 
-
+<li>welcome:{name}</li>
 </ul>
+
 
 
 </div>

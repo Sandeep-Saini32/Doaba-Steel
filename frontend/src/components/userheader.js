@@ -2,6 +2,8 @@ import { Link } from "react-router-dom"
 
 export const Userheader=()=>{
 
+    const name=localStorage.getItem("name") 
+
 return(
 <>
 <div className="container-fluid">
@@ -14,8 +16,9 @@ return(
 <li><Link to={"signup"}>signup</Link></li>
 <li><Link to={"contact"}>Contactus</Link></li>
 
-
+<li>welcome:{name}</li>
 </ul>
+
 
 
 </div>

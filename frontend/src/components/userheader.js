@@ -1,8 +1,27 @@
-import { Link } from "react-router-dom"
+import { useContext } from "react"
+import { Link, useNavigate } from "react-router-dom"
+import { Usercontext } from "./usercontext"
 
 export const Userheader=()=>{
 
+    const navigate=useNavigate()
+    const {setrole}=useContext(Usercontext)
+
+//   showing name:  
     const name=localStorage.getItem("name") 
+
+    // logout function
+const logoutfc=()=>{
+
+ alert("logout succeffully")   
+localStorage.removeItem("role")
+localStorage.removeItem("name")
+
+setrole("")
+navigate("/login")
+
+}
+
 
 return(
 <>
@@ -17,6 +36,7 @@ return(
 <li><Link to={"contact"}>Contactus</Link></li>
 
 <li className="barname">welcome:{name}</li>
+<l1><button onClick={logoutfc}>logout</button></l1>
 </ul>
 
 

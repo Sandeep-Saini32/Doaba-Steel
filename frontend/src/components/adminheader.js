@@ -13,9 +13,9 @@ return(
 <li>Dashboard</li>
 <li><Link to={"product"}>product</Link></li>
 <li><Link to={"order"}>order</Link></li>
-<li><Link to={"login"}>login</Link></li>
+<li><Link to={"admincat"}>categories</Link></li>
 <li><Link to={"customerinfo"}>customers</Link></li>
-
+<li><Link to={"login"}>login</Link></li>
 
 <li className="barname">welcome:{name}</li>
 </ul>

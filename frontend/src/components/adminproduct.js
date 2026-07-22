@@ -1,4 +1,4 @@
-export const Product=()=>{
+export const Adminproduct=()=>{
 
 return(
 <>

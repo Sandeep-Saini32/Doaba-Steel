@@ -28,8 +28,8 @@ return(
 <div className="row">
 <ul className="d-flex list-unstyled gap-4">
 
-<li>Dashboard</li>
-<li><Link to={"product"}>product</Link></li>
+<li><Link to={"adminhome"}> dashboard</Link></li>
+<li><Link to={"adminproduct"}>product</Link></li>
 <li><Link to={"order"}>order</Link></li>
 <li><Link to={"admincat"}>categories</Link></li>
 <li><Link to={"customerinfo"}>customers</Link></li>

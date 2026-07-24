@@ -29,14 +29,14 @@ return(
 <div className="row">
 <ul className="d-flex list-unstyled gap-4">
 
-<li>home</li>
+<li><Link to={"/"}> home</Link></li>
 <li><Link to={"shop"}>shop</Link></li>
 <li><Link to={"login"}>login</Link></li>
 <li><Link to={"signup"}>signup</Link></li>
 <li><Link to={"contact"}>Contactus</Link></li>
 
 <li className="barname">welcome:{name}</li>
-<l1><button onClick={logoutfc}>logout</button></l1>
+<li><button onClick={logoutfc}>logout</button></li>
 </ul>
 
 

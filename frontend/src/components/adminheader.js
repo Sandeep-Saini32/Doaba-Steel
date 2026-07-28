@@ -37,7 +37,7 @@ return(
 
 <li className="barname">welcome:{name}</li>
 
-<l1><button onClick={logoutfc}>logout</button></l1>
+<li><button onClick={logoutfc}>logout</button></li>
 </ul>
 
 

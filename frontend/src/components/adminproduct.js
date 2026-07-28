@@ -8,6 +8,12 @@ const [proprice,setproprice]=useState("")
 const [prodetail,setprodetail]=useState("")
 const [propic,setpropic]=useState("")
 
+
+// for edit
+const[oldpic,setoldpic]=useState("")
+const[proid,setproid]=useState("")
+
+
 const proadd=async(e)=>{
     e.preventDefault()
 
@@ -71,6 +77,80 @@ else{
 }
 
 
+// for delete
+
+const prodell=async(id)=>{
+
+  const dellresult=await fetch(`http://localhost:9000/api/deleteproduct/${id}`,{
+method:"delete"
+
+})
+
+if(dellresult){
+    const delldata= await dellresult.json()
+
+   if(delldata.statuscode===1){
+    alert("product deleted")
+    getproduct()
+   } 
+
+   else{
+    alert("product not deleted")
+   }
+
+}
+
+}
+// for edit
+
+const proedit=(pdata)=>{
+
+   setproname(pdata.proname)
+   setproprice(pdata.proprice)
+   setprodetail(pdata.prodetail) 
+   setpropic(pdata.propic)
+   
+   setoldpic(pdata.propic)
+   setproid(pdata._id)
+}
+
+// for update
+
+const proup=async(e)=>{
+    e.preventDefault()
+
+const updatedata= new FormData()
+
+updatedata.append("proname",proname)
+updatedata.append("proprice",proprice)
+updatedata.append("prodetail",prodetail)
+updatedata.append("propic",propic)
+
+updatedata.append("oldpic",oldpic)
+
+const upresult=await fetch(`http://localhost:9000/api/proupdate/${proid}`,{
+method:"put",
+body:updatedata
+
+})
+
+if(upresult.ok){
+  const upres= await upresult.json()
+
+if(upres.statuscode===1){
+    alert("pro data updated")
+}
+else{
+    alert("pro data not updated")
+}
+
+}
+
+}
+
+
+
+
 
 
 return(
@@ -105,14 +185,13 @@ width={"100px"}
 />  
 <p>{item.proname}</p>  
 <p>{item.proprice}</p>  
-<p>{item.prodetail}</p>  
+<p>{item.prodetail}</p> 
 
+<button onClick={proup}>update</button> 
+<button onClick={()=>{proedit(item)}}>edit</button>
+<button onClick={()=>{prodell(item._id)}}>delete</button>
 </div>
-
-
-
 ))
-
 
 }
 

@@ -2,6 +2,7 @@ const exprees=require("express")
 const cors=require("cors")
 const mongoose=require("mongoose")
 const multer=require("multer")
+const fs= require("fs")
 
 const app=exprees()
 
@@ -182,4 +183,72 @@ app.get("/api/getsavepro",async(req,res)=>{
 
 })
 
+// deleting product
+
+app.delete("/api/deleteproduct/:id",async(req,res)=>{
+
+const dellresult=await productModel.deleteOne({_id:req.params.id})
+console.log(dellresult)
+
+if(dellresult.deletedCount===1){
+    res.send({statuscode:1})
+}
+
+else{
+    res.send({statuscode:0})
+}
+
+})
+
+
+// update product
+app.put("/api/proupdate/:id",upload.single("propic"),async(req,res)=>{
+
+    if(!req.file){
+pic=req.body.oldpic
+
+ }
+
+ else {
+
+    pic = req.file.path;
+
+    if (req.body.oldpic) {
+
+        fs.unlink(req.body.oldpic, (error) => {
+
+            if (error) {
+                console.log("Image delete failed", error);
+            }
+            else {
+                console.log("Old image deleted");
+            }
+
+        });
+
+    }
+
+}
+
+const result = await productModel.updateOne({_id:req.params.id},{
+
+    $set:{
+        proname:req.body.proname,
+        proprice:req.body.proprice,
+        prodetail:req.body.prodetail,
+        propic:pic
+    }
+
+})
+
+if(result.modifiedCount==1){
+res.send({statuscode:1})
+
+}
+
+else{
+    res.send({statuscode:0})
+}
+  
+})
 

@@ -14,6 +14,7 @@ const[oldpic,setoldpic]=useState("")
 const[proid,setproid]=useState("")
 
 
+// for saving
 const proadd=async(e)=>{
     e.preventDefault()
 
@@ -48,6 +49,7 @@ const [savepro,setsavepro]=useState([])
 
 useEffect(()=>{
 getproduct()
+
 
 },[])
 
@@ -97,10 +99,9 @@ if(dellresult){
    else{
     alert("product not deleted")
    }
-
+}
 }
 
-}
 // for edit
 
 const proedit=(pdata)=>{
@@ -139,13 +140,13 @@ if(upresult.ok){
 
 if(upres.statuscode===1){
     alert("pro data updated")
+    getproduct()
 }
 else{
     alert("pro data not updated")
 }
 
 }
-
 }
 
 

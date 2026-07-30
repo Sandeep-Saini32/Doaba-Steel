@@ -252,3 +252,42 @@ else{
   
 })
 
+
+// saving category info
+
+const catSchema=mongoose.Schema({
+catname:String,
+catpic:String,
+addedon:String
+
+})
+
+const catModel=mongoose.model("category",catSchema)
+
+app.post("/api/addcategory",upload.single("catpic"),async(req,res)=>{
+
+
+    if(!req.file){
+    pic="default.web"
+}
+else{
+    pic=req.file.path
+}
+
+let newrecord= new catModel({
+catname:req.body.catname,
+catpic:pic,
+addedon: new Date()
+
+})
+
+let catimg= await newrecord.save()
+if(catimg){
+    res.send({statuscode:1})
+    console.log(req.body)
+}
+else{
+    res.send({statuscode:0})
+}
+
+})

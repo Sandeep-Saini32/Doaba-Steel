@@ -11,14 +11,17 @@ import { Shop } from "./shop"
 import { Contact } from "./contact"
 import { Customerinfo } from "./customerinfo"
 import { Admincat } from "./admincat"
+import { useContext } from "react"
+import { Usercontext } from "./usercontext"
 
 export const Routerr=()=>{
 
+    const {role}=useContext(Usercontext)
 
 return(
 <>
 <Routes>
-<Route path="/" element={<Landinghome/>} />
+<Route path="/" element={ role==="admin"?<Adminhome/>:<Landinghome/>} />
 <Route path="adminhome" element={<Adminhome/>} />
 <Route path="signup" element={<Signup/>} />
 <Route path="login" element={<Login/>} />

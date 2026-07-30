@@ -8,6 +8,13 @@ const [proprice,setproprice]=useState("")
 const [prodetail,setprodetail]=useState("")
 const [propic,setpropic]=useState("")
 
+// for gettinng product
+const [savepro,setsavepro]=useState([])
+
+useEffect(()=>{
+getproduct()
+
+},[])
 
 // for edit
 const[oldpic,setoldpic]=useState("")
@@ -45,13 +52,6 @@ else{
 }
 
 // for gettinng product
-const [savepro,setsavepro]=useState([])
-
-useEffect(()=>{
-getproduct()
-
-
-},[])
 
 const getproduct=async()=>{
 

@@ -258,7 +258,7 @@ else{
 const catSchema=mongoose.Schema({
 catname:String,
 catpic:String,
-addedon:String
+
 
 })
 
@@ -277,7 +277,7 @@ else{
 let newrecord= new catModel({
 catname:req.body.catname,
 catpic:pic,
-addedon: new Date()
+
 
 })
 
@@ -289,5 +289,23 @@ if(catimg){
 else{
     res.send({statuscode:0})
 }
+
+})
+
+
+// getting caategory
+
+app.get("/api/getsavecat",async(req,res)=>{
+
+const getcat= await catModel.find()
+
+if(getcat){
+    res.send({statuscode:1,allcategory:getcat})
+    console.log(getcat)
+}
+else{
+    res.send({statuscode:0})
+}
+
 
 })

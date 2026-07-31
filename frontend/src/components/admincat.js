@@ -13,6 +13,10 @@ getcategory()
 
 },[])
 
+const[oldcatpic,setoldcatpic]=useState("")
+const[oldcatid,setoldcatid]=useState("")
+
+
 
 // for saving
 const savecat=async(e)=>{
@@ -33,6 +37,7 @@ if(catresult.ok){
 
   if(catres.statuscode===1){
     alert("cat data saved")
+    getcategory()
   }  
 
 else{
@@ -67,6 +72,75 @@ else{
 
 }
 
+// delete category
+const catdell= async(id)=>{
+
+const dellcatresult=await fetch(`http://localhost:9000/api/deletecategory/${id}`,{
+method:"delete"
+})
+
+if(dellcatresult){
+
+  const dellcatdata= await dellcatresult.json()
+if(dellcatdata.statuscode===1){
+alert("category deleted")
+getcategory()
+
+}
+else{
+  alert("category not deleted")
+}
+
+}
+}
+
+// edit function
+const catedit=(Edata)=>{
+
+setcatname(Edata.catname)
+setcatpic(Edata.catpic)
+
+setoldcatpic(Edata.catpic)
+setoldcatid(Edata._id)
+
+}
+
+// update function
+const catup=async(e)=>{
+  e.preventDefault()
+
+
+  const updatecat= new FormData()
+
+updatecat.append("catname",catname)
+updatecat.append("catpic",catpic)
+updatecat.append("oldcatpic",oldcatpic)
+
+
+const upcatresult=await fetch(`http://localhost:9000/api/updatecategory/${oldcatid}`,{
+method:"put",
+body:updatecat
+
+})
+
+if(upcatresult.ok){
+const upres= await upcatresult.json()
+
+if(upres.statuscode===1){
+  alert("category updated")
+  getcategory()
+}
+
+else{
+  alert("category not updated")
+}
+
+}
+
+}
+
+
+
 
     
 
@@ -99,6 +173,10 @@ width={"100px"}
 
 />
 <p>{item.catname}</p>  
+<button onClick={()=>{catedit(item)}}>edit</button>
+<button onClick={catup}>update</button>
+<button onClick={()=>{catdell(item._id)}}>delete</button>
+
 </div>
 
  ))

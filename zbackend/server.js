@@ -11,6 +11,7 @@ app.use(exprees.json())
 app.use("/uploads",exprees.static("uploads"))
 
 const path = require("path")
+const { runInNewContext } = require("vm")
 
 
 
@@ -227,7 +228,6 @@ pic=req.body.oldpic
         });
 
     }
-
 }
 
 const result = await productModel.updateOne({_id:req.params.id},{
@@ -307,5 +307,72 @@ else{
     res.send({statuscode:0})
 }
 
+
+})
+
+// deleting category
+
+app.delete("/api/deletecategory/:id",async(req,res)=>{
+
+    const dellcatresult=await catModel.deleteOne({_id:req.params.id})
+    console.log(dellcatresult)
+
+  if(dellcatresult.deletedCount===1){
+    res.send({statuscode:1})
+  }  
+else{
+    res.send({statuscode:0})
+}
+
+
+})
+
+// update category
+
+app.put("/api/updatecategory/:id",upload.single("catpic"),async(req,res)=>{
+
+if(!req.file){
+    pic=req.body.oldcatpic
+}
+
+else{
+    pic=req.file.path
+
+if(req.body.oldcatpic){
+
+    fs.unlink(req.body.oldcatpic,(error)=>{
+
+        if(error){
+            console.log("catimg deleted failed",error)
+        }
+
+        else{
+            console.log("old img deleted")
+        }
+
+    })
+
+}
+
+}
+
+const catresult=await catModel.updateOne({_id:req.params.id},{
+
+$set:{
+
+    catname:req.body.catname,
+    catpic:pic,
+
+}
+
+})
+
+if(catresult.modifiedCount==1){
+    res.send({statuscode:1})
+}
+
+else{
+    res.send({statuscode:0})
+}
 
 })

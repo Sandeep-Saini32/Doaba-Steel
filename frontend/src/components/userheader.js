@@ -48,10 +48,10 @@ return(
 
 <ul className=" nav-name d-flex list-unstyled  ">
 <li><Link to={"/"}>Home</Link></li>
-<li><Link to={"shop"}>Shop</Link></li>
-<li><Link to={"about"}>About Us</Link></li>
-<li><Link to={"signup"}>Account</Link></li>
-<li><Link to={"contact"}>Contact Us</Link></li>
+<li><Link to={"/shop"}>Shop</Link></li>
+<li><Link to={"/about"}>About Us</Link></li>
+<li><Link to={"/signup"}>Account</Link></li>
+<li><Link to={"/contact"}>Contact Us</Link></li>
 </ul>
 </div>
 
@@ -64,10 +64,10 @@ return(
 
   {name && (
     <span>
-      <button onClick={logoutfc}>
+      <button className="logbtn" onClick={logoutfc}>
         <i
           className="fa-solid fa-right-from-bracket"
-          style={{ color: "rgb(255, 255, 255)" }}
+        
         ></i>
       </button>
     </span>
@@ -77,7 +77,7 @@ return(
     </div>
 
 <div className="nav-icon">
-<i class="fa-solid fa-user" style={{color:"white"}}></i>
+<Link to={"/login"}><i class="fa-solid fa-user" ></i></Link>
 <i class="fa-solid fa-magnifying-glass" style={{color:"rgb(255, 255, 255)"}}></i>
 <i class="fa-solid fa-heart" style={{color:"rgb(255, 255, 255)"}}></i>
 <i class="fa-solid fa-cart-shopping" style={{color: "rgb(255, 255, 255)"}}></i>

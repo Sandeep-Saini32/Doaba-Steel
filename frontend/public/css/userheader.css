@@ -1,0 +1,115 @@
+
+
+body{
+        font-family: "Poppins", sans-serif !important;
+}
+
+.nav-section{
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+
+}
+
+.logo-section{
+    display: flex;
+    align-items: center;
+    gap: 0px;
+  
+
+}
+.bolt-icon{
+    color: red;
+    padding-bottom: 20px;
+    font-size: 22px;
+    margin: 0px;
+   
+}
+
+.web-logo{
+    height: 100px;
+    margin-left: -28px;
+   
+}
+
+
+.webname{
+      font-family: "Oswald", sans-serif;
+      margin-left: 7px;
+
+}
+
+.tittle{
+    color: red;
+
+
+}
+
+.subtitle{
+   color: white;
+   width: 300px;
+padding-top: 5px;
+font-size: 25px;
+
+}
+
+.navlink{
+    margin-left: 100px;
+    padding-top: 40px;
+font-size: 20px;
+}
+
+.nav-name{
+    gap:50px
+}
+
+
+
+.nav-right{
+    margin-left: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.top-user{
+   
+    align-self: flex-end;
+    transform: translatey(-25px);
+}
+
+.welcome-text{
+    color: white;
+   margin: 0px;
+   display: flex;
+align-items: center;
+gap: 10px; 
+
+/* padding-left: 80px; */
+
+}
+
+.nav-icon{
+
+  display: flex;
+  font-size: 20px;
+gap:30px;
+
+
+}
+
+.nav-icon i{
+   color: white;
+
+
+font-size: 18px;
+   
+  } 
+
+
+
+.barname{
+    display: block;
+}

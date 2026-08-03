@@ -177,7 +177,9 @@ return(
 {
 
 savepro.map((item,index)=>(
-<div className="col-lg-3 col-md-4 col-6 mb-4" key={index}>
+<div className="col-lg-2 col-md-4 col-sm-6 col-6" key={index}>
+    {/* <div class="col-lg-12 bg-dark text-white p-3"> */}
+
 
 <img
 src={`http://localhost:9000/${item.propic}`}

@@ -23,7 +23,7 @@ method:"get"
     const data= await saveprodata.json()
 
 if(data.statuscode===1){
-    alert("product fetched")
+    // alert("product fetched")
     setsavepro(data.allproduct)
 }
 
@@ -73,6 +73,43 @@ width={"100px"}
 }
 
 </div>
+</div>
+
+<div className="container">
+    <table>
+<tr>
+    <td>day 1</td>
+    <td>day 2</td>
+    <td>day 3</td>
+</tr>
+
+<tr>
+    <td>day 4</td>
+    <td>day 5</td>
+    <td>day 6</td>
+</tr>
+
+    </table>
+
+</div>
+
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-lg-12 bg-dark text-white p-3">
+      Header
+    </div>
+
+    <div class="col-lg-3 bg-warning p-5">
+      Sidebar
+    </div>
+
+    <div class="col-lg-9 bg-info p-5">
+      Content
+    </div>
+
+  </div>
 </div>
 
 

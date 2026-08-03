@@ -11,42 +11,94 @@ export const Userheader=()=>{
     const name=localStorage.getItem("name") 
 
     // logout function
-const logoutfc=()=>{
+ const logoutfc=()=>{
 
- alert("logout succeffully")   
-localStorage.removeItem("role")
-localStorage.removeItem("name")
+  alert("logout succeffully")   
+ localStorage.removeItem("role")
+ localStorage.removeItem("name")
+ setrole("")
+ navigate("/login")
 
-setrole("")
-navigate("/login")
-
-}
+ }
 
 
 return(
 <>
-<div className="container-fluid">
-<div className="row">
-<ul className="d-flex list-unstyled gap-4">
 
-<li><Link to={"/"}> home</Link></li>
-<li><Link to={"shop"}>shop</Link></li>
-<li><Link to={"login"}>login</Link></li>
-<li><Link to={"signup"}>signup</Link></li>
-<li><Link to={"contact"}>Contactus</Link></li>
+<header>
+<nav className="navbar bg-dark">
 
-<li className="barname">welcome:{name}</li>
-<li><button onClick={logoutfc}>logout</button></li>
+    <div className="container-fluid ">
+  <div className="row">
+     
+   <div className="nav-section">
+
+<div className="logo-section">
+<i className="fa-solid fa-bolt bolt-icon"></i>
+    <img src="/images/logo.png" alt="logo" className="web-logo"></img>
+</div>
+
+       <div className="webname">
+      <h1 className="tittle">DOABA</h1>
+        <h4 className="subtitle">STEEL FABRICATORS & WORKS</h4>
+     </div>
+
+
+<div className="navlink">
+
+<ul className=" nav-name d-flex list-unstyled  ">
+<li><Link to={"/"}>Home</Link></li>
+<li><Link to={"shop"}>Shop</Link></li>
+<li><Link to={"about"}>About Us</Link></li>
+<li><Link to={"signup"}>Account</Link></li>
+<li><Link to={"contact"}>Contact Us</Link></li>
 </ul>
+</div>
 
+<div className="nav-right">
+
+    <div className="top-user">
+
+<h6 className="welcome-text">
+  Welcome: <b>{name || "Guest"}</b>
+
+  {name && (
+    <span>
+      <button onClick={logoutfc}>
+        <i
+          className="fa-solid fa-right-from-bracket"
+          style={{ color: "rgb(255, 255, 255)" }}
+        ></i>
+      </button>
+    </span>
+  )}
+</h6>
+
+    </div>
+
+<div className="nav-icon">
+<i class="fa-solid fa-user" style={{color:"white"}}></i>
+<i class="fa-solid fa-magnifying-glass" style={{color:"rgb(255, 255, 255)"}}></i>
+<i class="fa-solid fa-heart" style={{color:"rgb(255, 255, 255)"}}></i>
+<i class="fa-solid fa-cart-shopping" style={{color: "rgb(255, 255, 255)"}}></i>
+</div>
 
 
 </div>
 
 
-
+</div>
 </div>
 
+    </div>
+
+
+
+
+</nav>
+
+
+</header>
 
 </>
 

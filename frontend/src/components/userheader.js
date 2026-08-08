@@ -25,39 +25,57 @@ export const Userheader=()=>{
 return(
 <>
 
-<header>
-<nav className="navbar bg-dark">
+ <header>
 
-    <div className="container-fluid ">
-  <div className="row">
-     
-   <div className="nav-section">
+<nav>
+
+<div className="container-fluid">
+
+<div className="row bg-dark ">
+
+
+    <div class="col-lg-4">
 
 <div className="logo-section">
 <i className="fa-solid fa-bolt bolt-icon"></i>
     <img src="/images/logo.png" alt="logo" className="web-logo"></img>
-</div>
 
-       <div className="webname">
-      <h1 className="tittle">DOABA</h1>
+
+  <div className="webname">
+      <h1 className="tittle">DOABA
+         <span className="hamb-bars"> <i className="fa-solid fa-bars" ></i>
+
+</span>
+</h1>
         <h4 className="subtitle">STEEL FABRICATORS & WORKS</h4>
      </div>
 
+</div>
 
-<div className="navlink">
+</div>
 
-<ul className=" nav-name d-flex list-unstyled  ">
+    <div class="col-lg-5 nav-link">
+
+     <ul className="nav-name d-flex list-unstyled  ">
 <li><Link to={"/"}>Home</Link></li>
 <li><Link to={"/shop"}>Shop</Link></li>
 <li><Link to={"/about"}>About Us</Link></li>
-<li><Link to={"/signup"}>Account</Link></li>
+<li><Link to={"/signup"}>Account<i class="fa-solid fa-caret-down"></i> </Link></li>
 <li><Link to={"/contact"}>Contact Us</Link></li>
 </ul>
-</div>
+
+      
+     
+  
+    </div>
+
+
+ <div class="col-lg-3 nav-user d-flex align-items-center px-5">
+
 
 <div className="nav-right">
 
-    <div className="top-user">
+    {/* <div className="top-user"> */}
 
 <h6 className="welcome-text">
   Welcome: <b>{name || "Guest"}</b>
@@ -74,31 +92,37 @@ return(
   )}
 </h6>
 
-    </div>
+    {/* </div> */}
 
 <div className="nav-icon">
-<Link to={"/login"}><i class="fa-solid fa-user" ></i></Link>
-<i class="fa-solid fa-magnifying-glass" style={{color:"rgb(255, 255, 255)"}}></i>
-<i class="fa-solid fa-heart" style={{color:"rgb(255, 255, 255)"}}></i>
-<i class="fa-solid fa-cart-shopping" style={{color: "rgb(255, 255, 255)"}}></i>
+
+<Link to={"/login"}><i className="user-icon fa-solid fa-user" ></i></Link>
+<Link to><i className="search-icon fa-solid fa-magnifying-glass" ></i></Link>
+<Link to={"/wishlist"}><i className="fa-solid fa-heart" ></i></Link>
+<Link to={"/cart"}><i className="fa-solid fa-cart-shopping" ></i></Link>
+
+</div>
+
+</div>
+
+ </div>
+
+
+
 </div>
 
 
 </div>
-
-
-</div>
-</div>
-
-    </div>
-
-
-
 
 </nav>
 
+</header> 
 
-</header>
+
+
+
+
+
 
 </>
 

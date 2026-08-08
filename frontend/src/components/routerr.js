@@ -14,6 +14,8 @@ import { Admincat } from "./admincat"
 import { useContext } from "react"
 import { Usercontext } from "./usercontext"
 import { About } from "./about"
+import { Wishlist } from "./wishlist"
+import { Cart } from "./cart"
 
 export const Routerr=()=>{
 
@@ -35,6 +37,9 @@ return(
 <Route path="customerinfo"element={<Customerinfo/>}/>
 <Route path="admincat"element={<Admincat/>}/>
 <Route  path="about" element={<About/>}/>
+<Route  path="wishlist"element={<Wishlist/>} />
+<Route  path="cart"element={<Cart/>} />
+
 
 </Routes>
 

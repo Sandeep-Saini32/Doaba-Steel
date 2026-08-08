@@ -2,133 +2,127 @@
 
 body{
         font-family: "Poppins", sans-serif !important;
+       
 }
 
-.nav-section{
-    height: 100px;
-    width: 100px;
-    display: flex;
-    align-items: center;
 
-}
+.logo-area{
+    display:flex;
+    align-items:center;
+    
+} 
 
 .logo-section{
-    display: flex;
-    align-items: center;
-    gap: 0px;
-  
-
+    display:flex;
+    align-items:center;
 }
+
+
 .bolt-icon{
     color: red;
-    padding-bottom: 20px;
-    font-size: 22px;
-    margin: 0px;
-   
+ padding-bottom: 20px;
+    font-size: 26px;
+
 }
 
-.web-logo{
-    height: 100px;
-    margin-left: -28px;
+ .web-logo{
+      height: 120px;
+    margin-left: -35px;
    
-}
+    }
 
 
 .webname{
+    padding-top: 10px;
       font-family: "Oswald", sans-serif;
-      margin-left: 7px;
+    
+} 
 
-}
-
-.tittle{
+ .tittle{
     color: red;
-
-
 }
 
 .subtitle{
    color: white;
-   width: 300px;
-padding-top: 5px;
-font-size: 25px;
+font-size: 28px;
 
+} 
+
+.hamb-bars{
+    color: white;
+    display: none;
+cursor: pointer;
+    
+    }
+.hamb-bars:hover{
+    color: red;
 }
 
-.navlink{
-    margin-left: 100px;
-    padding-top: 40px;
-font-size: 20px;
+
+/* center div */
+
+.nav-link{
+    display: flex !important;
+    align-items: center ;
+    
+  
 }
 
-.nav-name{
-    gap:50px
+ .nav-name{
+    gap:36px;
+font-size: 22px;
+
+  
 }
 
 .nav-name a{
     color: white;
     text-decoration: none;
     cursor: pointer;
-    padding-bottom: 5px;
+    /* padding-bottom: 5px; */
+
 }
 
 .nav-name :hover a{
     color: red;
     border: 10px;
     border-bottom: 2px solid red;
-}
+} 
 
 
-.nav-right{
-    margin-left: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   
-}
-
-.top-user{
-   
-    align-self: flex-end;
-    transform: translatey(-25px);
-}
-
-.welcome-text{
-    color: white;
-   margin: 0px;
-   display: flex;
-align-items: center;
-gap: 10px; 
-
-/* padding-left: 80px; */
-
-}
-
-.nav-icon{
-
-  display: flex;
-  font-size: 20px;
-gap:30px;
 
 
-}
 
-.nav-icon i{
-   color: white;
 
-   font-size: 18px;
-cursor: pointer;   
-}
+/* 3rd div */
 
-.nav-icon:hover i{
+ .nav-right{
+ padding-left: 0px;
+  
+
+} 
+ 
+ .welcome-text{
+    color: lightgrey;
+    padding-left: 0px;
+margin-bottom: 40px;
+  padding-left: 30px;
+
+ gap: 25px;  
+
+ } 
+
+.welcome-text b{
     color: red;
+    padding-left:5px;
 }
 
-
-  .logbtn{
+.logbtn{
     background-color: transparent;
     border: none;
     cursor: pointer;
     color: white;
+    font-size: 19px;
 }
 
 .logbtn:hover i{
@@ -136,7 +130,191 @@ cursor: pointer;
 }
 
 
+.nav-icon{
 
-.barname{
-    display: block;
+   padding-left: 0px; 
+ display: flex;
+    align-items: center;
+    gap: 40px; 
+
 }
+
+.nav-icon i{
+   color: white;
+padding-left: 0px;
+   font-size: 20px;
+cursor: pointer;   
+} 
+
+
+.nav-icon i:hover{
+    color: red;
+} 
+
+
+/* 
+
+for LAPTOP 1450 */
+
+@media(max-width: 1450px){
+
+.bolt-icon{
+    font-size: 19px;
+    padding-bottom:13px;
+}
+
+.web-logo{
+      height: 80px;
+   margin-left: -25px;
+    }
+
+ .tittle{
+  font-size: 29px;
+}
+
+.subtitle{
+  
+font-size: 18px;
+
+} 
+
+
+
+.nav-name{
+font-size: 16px;
+gap: 18px;
+
+}
+
+.hamb-bars{
+    display: none;
+
+}
+
+
+ .welcome-text{
+   
+    padding-left: 0px;
+margin-bottom: 20px;
+font-size: 14px;
+ gap: 25px;  
+
+ } 
+
+.logbtn{
+    font-size: 16px;
+}
+
+
+.nav-icon{
+
+    gap: 30px; 
+
+}
+
+ .nav-icon i{
+  
+   font-size: 17px;
+cursor: pointer;   
+} 
+
+}
+
+
+
+/* for TABLET 991PX */
+
+@media(max-width:991px){
+
+
+.nav-name.d-flex{
+
+    display: none !important;
+}
+
+.bolt-icon{
+    font-size: 26px;
+    padding-bottom: 10px;
+
+}
+
+.web-logo{
+    height: 100px;
+margin-left: -35px;
+}
+
+.tittle{
+    font-size: 38px;
+}
+
+.subtitle{
+    font-size: 28px;
+}
+
+.webname{
+    /* display: flex; */
+
+padding-bottom: 10px;
+
+}
+
+.hamb-bars{
+    display: inline-block;
+    padding-left: 20px;
+font-size: 30px;
+
+}
+
+
+.welcome-text{
+    padding-left: 80px;
+    margin-bottom: 40px;
+}
+
+.nav-icon{
+    padding-left: 50px;
+
+}
+
+.logbtn{
+    
+    font-size: 19px;
+}
+
+.nav-icon{
+
+    gap: 40px; 
+
+}
+
+ .nav-icon i{
+
+   font-size: 20px;
+   
+}
+
+
+.row{
+  position: relative;
+}
+
+    .nav-user{
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        width: auto !important;
+        /* padding: 0 !important; */
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+

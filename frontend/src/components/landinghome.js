@@ -97,20 +97,52 @@ width={"100px"}
 <div class="container">
   <div class="row">
 
-    <div class="col-lg-12 bg-dark text-white p-3">
+    <div class="col-lg-4  col-md-12  bg-dark text-white p-5">
       Header
     </div>
 
-    <div class="col-lg-3 bg-warning p-5">
+    <div class="col-lg-4 col-md-6 bg-warning p-5">
       Sidebar
     </div>
 
-    <div class="col-lg-9 bg-info p-5">
+    <div class="col-lg-4 col-md-6 bg-info p-5">
       Content
     </div>
 
   </div>
 </div>
+
+
+{/* 
+<header>
+
+<nav>
+
+<div className="container-fluif">
+
+<div className="row">
+
+    <div class="col-lg-8 bg-primary text-white p-5">
+      Header
+    </div>
+
+    <div class="col-lg-4 bg-warning p-5">
+      Sidebar
+    </div>
+
+
+</div>
+
+
+</div>
+
+
+</nav>
+
+
+</header> */}
+
+
 
 
 

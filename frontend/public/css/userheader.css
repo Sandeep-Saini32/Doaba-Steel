@@ -2,9 +2,21 @@
 
 body{
         font-family: "Poppins", sans-serif !important;
+        /* margin: 0px;
+        padding: 0px;
+        overflow-x: hidden; */
        
 }
 
+/* .head-row{
+  position: relative;
+} */
+
+
+.mobile-bar{
+    display: none;
+
+}
 
 .logo-area{
     display:flex;
@@ -152,11 +164,14 @@ cursor: pointer;
 } 
 
 
+
+
+
 /* 
 
-for LAPTOP 1450 */
+for DESKTOP 1450 */
 
-@media(max-width: 1450px){
+@media(max-width: 1451px){
 
 .bolt-icon{
     font-size: 19px;
@@ -218,17 +233,26 @@ font-size: 14px;
 cursor: pointer;   
 } 
 
+
 }
 
 
 
-/* for TABLET 991PX */
+
+
+
+
+/* for LAPTOP 991PX */
 
 @media(max-width:991px){
 
 
-.nav-name.d-flex{
+.nav-link{
 
+    display: none !important;
+}
+
+.nav-name.d-flex{
     display: none !important;
 }
 
@@ -245,14 +269,15 @@ margin-left: -35px;
 
 .tittle{
     font-size: 38px;
+  
 }
 
 .subtitle{
     font-size: 28px;
+    white-space: nowrap;
 }
 
 .webname{
-    /* display: flex; */
 
 padding-bottom: 10px;
 
@@ -260,60 +285,280 @@ padding-bottom: 10px;
 
 .hamb-bars{
     display: inline-block;
-    padding-left: 20px;
+    padding-left: 13px;
 font-size: 30px;
 
 }
 
 
 .welcome-text{
-    padding-left: 80px;
-    margin-bottom: 40px;
-}
-
-.nav-icon{
-    padding-left: 50px;
-
-}
-
-.logbtn{
-    
-    font-size: 19px;
-}
-
-.nav-icon{
-
-    gap: 40px; 
-
-}
-
- .nav-icon i{
-
-   font-size: 20px;
-   
+   display: none;
 }
 
 
-.row{
-  position: relative;
+.nav-user{
+    margin-left: auto;
+
 }
 
-    .nav-user{
-        position: absolute;
-        right: 20px;
-        top: 10px;
-        width: auto !important;
-        /* padding: 0 !important; */
+
+
+  .nav-icon .user-icon,
+    .nav-icon .search-icon,
+    .nav-icon .fa-heart{
+        display: none;
+    }
+
+   .nav-icon .fa-cart-shopping{
+  padding-top: 52px; 
+font-size: 20px;
+
     }
 
 
 
+        .head-row > .nav-user{
+        /* flex: 0 0 25%; */
+        /* max-width: 25%; */
+        /* display: flex; */
+        /* justify-content: flex-end; */
+        /* align-items: center; */
+    }
+
+
+
+/* .welcome-text{
+display: none;
+
+} */
+
+
+   .nav-icon .fa-cart-shopping{
+     /* padding-top: 62px; 
+padding-left: 80px; */
+   /* position: absolute; */
+
+ 
+   
+    
+}
+
+/* MOBILE-SIDEBAR from  991px*/
+
+.mobile-bar{
+    display: block;
+    height: 100%;
+    width: 360px;
+    position: fixed;
+ top:0;
+
+ z-index: 1001;
+ 
+   background-color: black;
+/* 
+  display: flex;
+    flex-direction: column; */
+
+    padding: 15px 20px;
+    box-sizing: border-box;
+
+
+
+}
+
+.close-row{
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+
+.exit-icon{
+    background-color:transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    font-size: 15px;
+    padding-bottom: 8px;
+  
+   /* margin-top: -60px;
+   padding-left: 100px; */
+}
+
+.exit-icon:hover{
+    
+    cursor: pointer;
+    color: red;
+   
+  
+   /* margin-top: -60px;
+   padding-left: 100px; */
+   
+
+}
+
+.sidebar-top{
+  display: flex;
+justify-content: space-between;
+
+
+}
+
+.sidebar-top h1{
+    color: red;
+   font-family: "Oswald", sans-serif;
+font-size: 50px;   
+
+}
+
+
+.loginbtn{
+   
+    width: 110px;
+    font-size: 20px;
+    border: none;
+background-color: lightgray;
+border-radius: 25px;
+ 
+}
+
+.loginbtn{
+padding: 0px;
+height: 50px;
+}
+
+
+.loginbtn:hover{
+    background-color: red;
+    color: white;
+
+}
+
+.sidebar-name{
+    padding-left: 180px;
+    padding-top: 15px;
+    color: white;
+
+}
+
+.sidebar-name b{
+
+    color: red
+};
+
+
+
+.sidebar-link{
+    margin-top: 20px;
+
+}
+
+ .sidebar-nav{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+font-size: 22px;
+
+
+  
+}
+
+.sidebar-nav a{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+
+
+.sidebar-nav a:hover{
+    color: red;
+    border: 10px;
+    border-bottom: 2px solid red;
+} 
+
+
+.sidebar-btn{
+
+    margin-top: 50px;
+display: flex;
+justify-content: space-between;
+font-size: 18px;
+
+}
+
+.sidebar-btn button{
+padding: 10px;
+border: none;
+background-color: lightgray;
+border-radius: 30px;
+
+
+}
+
+
+.sidebar-btn button:hover{
+
+    background-color: red;
+color: white;
+
+}
+
+
+
 }
 
 
 
 
 
+
+
+
+
+/* for TAB 768px */
+
+@media(max-width:768px){
+
+    /* .head-row{
+    
+        display: flex;
+        flex-wrap: nowrap;
+align-items: center;
+    } */
+
+
+      .head-row > .col-md-6{
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+
+    .head-row > .nav-user{
+        /* flex: 0 0 25%; */
+        max-width: 25%;
+        /* display: flex; */
+        justify-content: flex-end;
+        /* align-items: center; */
+    }
+
+
+
+
+.mobile-bar{
+
+    width: 330px;
+  
+
+}
+
+.sidebar-name{
+    padding-left: 150px;
+
+}
+
+}
 
 
 

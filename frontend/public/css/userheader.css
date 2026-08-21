@@ -2,15 +2,16 @@
 
 body{
         font-family: "Poppins", sans-serif !important;
-        /* margin: 0px;
-        padding: 0px;
-        overflow-x: hidden; */
+        margin: 0px !important;
+        padding: 0px !important;
+        overflow-x: hidden;
        
 }
 
-/* .head-row{
-  position: relative;
-} */
+.head-row{
+ background-color: black;
+ border-bottom: 1px solid gray;
+}
 
 
 .mobile-bar{
@@ -32,31 +33,32 @@ body{
 
 .bolt-icon{
     color: red;
- padding-bottom: 20px;
-    font-size: 26px;
+ padding-bottom: 0px;
+    font-size: 32px;
 
 }
 
  .web-logo{
-      height: 120px;
-    margin-left: -35px;
+      height: 100px;
+    margin-left: -30px;
    
     }
 
 
 .webname{
-    padding-top: 10px;
+    padding-top: 0px;
       font-family: "Oswald", sans-serif;
     
 } 
 
  .tittle{
     color: red;
+    font-size: 35px;
 }
 
 .subtitle{
    color: white;
-font-size: 28px;
+font-size: 22px;
 
 } 
 
@@ -71,20 +73,20 @@ cursor: pointer;
 }
 
 
+
 /* center div */
 
 .nav-link{
     display: flex !important;
-    align-items: center ;
-    
+    align-items: center;
+    justify-content: center;
   
-}
+ }
 
- .nav-name{
-    gap:36px;
-font-size: 22px;
+ .nav-name li{
 
-  
+ padding: 15px;
+
 }
 
 .nav-name a{
@@ -101,6 +103,61 @@ font-size: 22px;
     border-bottom: 2px solid red;
 } 
 
+.account-head{
+    color: white;
+    position:relative;
+    cursor: pointer;
+     padding-bottom: 5px;
+   
+}
+
+.account-head:hover {
+    color: red;
+    border-bottom: 2px solid red;
+    
+    
+   
+}
+
+.account-drop{
+    display: none;
+    position: absolute;
+   
+     top: 100%;
+    left: 50%; 
+     transform: translateX(-50%);
+
+    padding-left:8px; 
+    width: 150px;
+    height: 95px;
+
+    background-color: white;
+    z-index: 9999;
+}
+
+
+.account-head:hover .account-drop {
+    display: block;
+}
+
+.acc-drop-list li{
+
+    padding: 10px;
+
+}
+
+ .acc-drop-list li a{
+    color: black !important;
+    border:none !important
+ 
+ 
+}
+
+.acc-drop-list li a:hover{
+    color: red !important;
+    border-bottom: 2px solid red !important;
+}
+
 
 
 
@@ -116,8 +173,7 @@ font-size: 22px;
  
  .welcome-text{
     color: lightgrey;
-    padding-left: 0px;
-margin-bottom: 40px;
+margin-bottom: 30px;
   padding-left: 30px;
 
  gap: 25px;  
@@ -141,10 +197,15 @@ margin-bottom: 40px;
     color: red;
 }
 
+.nav-right{
+
+   margin-left: 30px;
+
+}
 
 .nav-icon{
 
-   padding-left: 0px; 
+  
  display: flex;
     align-items: center;
     gap: 40px; 
@@ -167,69 +228,79 @@ cursor: pointer;
 
 
 
-/* 
 
-for DESKTOP 1450 */
+/* for DESKTOP 1200  */
 
-@media(max-width: 1451px){
+ @media(max-width: 1200px){
 
 .bolt-icon{
-    font-size: 19px;
-    padding-bottom:13px;
+    font-size: 27px;
+  
 }
 
 .web-logo{
-      height: 80px;
+      height: 85px;
    margin-left: -25px;
     }
 
  .tittle{
-  font-size: 29px;
+  font-size: 27px;
 }
 
 .subtitle{
   
-font-size: 18px;
+font-size: 17px;
 
 } 
 
 
 
-.nav-name{
-font-size: 16px;
-gap: 18px;
+.nav-name li{
+ 
+    font-size: 14px;
+    padding: 11px;
+
 
 }
 
-.hamb-bars{
-    display: none;
+.account-drop{
+ 
 
+    width: 130px;
+    height: 90px;
+
+   
 }
 
 
  .welcome-text{
    
-    padding-left: 0px;
+    padding-left: 20px;
 margin-bottom: 20px;
-font-size: 14px;
- gap: 25px;  
+font-size: 12px;
+  
 
  } 
 
 .logbtn{
-    font-size: 16px;
+    font-size: 14px;
 }
 
+.nav-right{
+
+   margin-left: 55px;
+
+}
 
 .nav-icon{
 
-    gap: 30px; 
+    gap: 28px; 
 
 }
 
  .nav-icon i{
   
-   font-size: 17px;
+   font-size: 15px;
 cursor: pointer;   
 } 
 
@@ -242,9 +313,9 @@ cursor: pointer;
 
 
 
-/* for LAPTOP 991PX */
+/* for LAPTOP 992px */
 
-@media(max-width:991px){
+@media(max-width:992px){
 
 
 .nav-link{
@@ -257,14 +328,19 @@ cursor: pointer;
 }
 
 .bolt-icon{
-    font-size: 26px;
-    padding-bottom: 10px;
+    font-size: 30px;
+    padding-bottom: 0px;
+
+}
+
+.webname{
+    padding-top: 5px;
 
 }
 
 .web-logo{
     height: 100px;
-margin-left: -35px;
+margin-left: -22px;
 }
 
 .tittle{
@@ -313,58 +389,36 @@ font-size: 30px;
   padding-top: 52px; 
 font-size: 20px;
 
-    }
+    } 
 
-
-
-        .head-row > .nav-user{
-        /* flex: 0 0 25%; */
-        /* max-width: 25%; */
-        /* display: flex; */
-        /* justify-content: flex-end; */
-        /* align-items: center; */
-    }
-
-
-
-/* .welcome-text{
-display: none;
-
-} */
-
-
-   .nav-icon .fa-cart-shopping{
-     /* padding-top: 62px; 
-padding-left: 80px; */
-   /* position: absolute; */
-
- 
-   
-    
-}
 
 /* MOBILE-SIDEBAR from  991px*/
 
+.sidebar-overlay{
+    position: fixed;
+    inset: 0;
+    background-color:rgb(0,0,0,0.5);
+     z-index: 999; 
+
+}
+
+
 .mobile-bar{
-    display: block;
+    display: block !important;
     height: 100%;
-    width: 360px;
+    width: 300px;
     position: fixed;
  top:0;
 
  z-index: 1001;
  
    background-color: black;
-/* 
-  display: flex;
-    flex-direction: column; */
 
     padding: 15px 20px;
     box-sizing: border-box;
+  }
 
-
-
-}
+  
 
 .close-row{
     display: flex;
@@ -408,26 +462,21 @@ justify-content: space-between;
 .sidebar-top h1{
     color: red;
    font-family: "Oswald", sans-serif;
-font-size: 50px;   
+font-size: 40px;   
 
 }
 
 
 .loginbtn{
    
-    width: 110px;
-    font-size: 20px;
+    height: 40px;
+    width: 100px;
+    font-size: 18px;
     border: none;
 background-color: lightgray;
 border-radius: 25px;
  
 }
-
-.loginbtn{
-padding: 0px;
-height: 50px;
-}
-
 
 .loginbtn:hover{
     background-color: red;
@@ -436,10 +485,10 @@ height: 50px;
 }
 
 .sidebar-name{
-    padding-left: 180px;
+    padding-left: 130px;
     padding-top: 15px;
     color: white;
-
+font-size: 14px;
 }
 
 .sidebar-name b{
@@ -448,17 +497,18 @@ height: 50px;
 };
 
 
-
 .sidebar-link{
-    margin-top: 20px;
 
+     margin-top: 5px;
 }
 
  .sidebar-nav{
     display: flex;
     flex-direction: column;
     gap:30px;
-font-size: 22px;
+font-size: 18px;
+ margin-left: 15px;
+  margin-top: 15px;
 
 
   
@@ -485,7 +535,7 @@ font-size: 22px;
     margin-top: 50px;
 display: flex;
 justify-content: space-between;
-font-size: 18px;
+font-size: 15px;
 
 }
 
@@ -542,15 +592,33 @@ align-items: center;
         justify-content: flex-end;
         /* align-items: center; */
     }
+    
+    .webname{
+    padding-top: 5px;
 
+}
 
+  .nav-icon .fa-cart-shopping{
+  padding-top: 50px; 
+font-size: 20px;
+
+    } 
 
 
 .mobile-bar{
 
-    width: 330px;
+    width: 265px;
   
 
+}
+
+.exit-icon{
+    font-size: 12px;
+
+}
+
+.sidebar-top h1{
+    font-size: 37px;
 }
 
 .sidebar-name{
@@ -558,7 +626,117 @@ align-items: center;
 
 }
 
+
+.loginbtn{
+    height: 33px;
+    width: 90px;
+    font-size: 16px;
+    margin-top: 5px;
 }
+
+.sidebar-name{
+    padding-left: 100px;
+}
+
+.sidebar-nav{
+    font-size: 16px;
+
+}
+
+
+.sidebar-btn{
+    font-size: 13px;
+}
+
+
+}
+
+
+
+
+/* SM - 576px */
+
+ @media(max-width:576px){
+
+.mobile-bar{
+    width: 250px;
+}
+
+.sidebar-top h1{
+
+font-size: 30px;    
+}
+
+.sidebar-name{
+    padding-left: 0px;
+  
+}
+
+.loginbtn{
+   
+    height: 30px;
+    width: 85px;
+    font-size: 15px;
+}
+
+.sidebar-btn{
+
+margin-top: 40px;
+    font-size: 11px;
+
+}
+
+.sidebar-name{
+    padding-left: 90px;
+    font-size: 13px;
+}
+
+
+
+.sidebar-nav{
+    font-size: 18px;
+  gap:25px
+}
+
+.webname{
+    padding-top: 5px;
+
+}
+
+.tittle{
+    font-size: 27px;
+}
+
+ .subtitle {
+        font-size: 19px;
+    }
+
+.hamb-bars{
+    font-size: 21px;
+}
+
+
+.web-logo{
+    height: 80px;
+    margin-left: -17px;
+}
+
+.bolt-icon{
+    font-size: 24px;
+  
+
+}
+
+
+
+ .nav-icon .fa-cart-shopping{
+  padding-top: 30px; 
+font-size: 13px;
+
+    }
+
+
+} 
 
 
 

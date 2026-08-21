@@ -1,0 +1,276 @@
+.landing-banner{
+    background-color: black;
+   
+}
+
+.banner-row{
+ 
+    /* align-items: center; */
+    padding: 20px 0px;
+}
+
+
+.bannerimg{
+    height: 400px;
+    width: 100%;
+object-fit: cover;
+border-radius: 3px;
+}
+
+.banner-text{
+    color: white;
+    padding-left: 70px !important;
+
+}
+.banner-text h1{
+    color: white;
+     font-family: "Oswald", sans-serif;
+     font-size: 50px;
+     padding-top: 30px;
+    
+}
+
+
+.banner-subtitle{
+    color: red;
+    font-size: 58px;
+
+}
+
+.banner-text p{
+    padding-top: 20px;
+
+}
+
+
+.banner-btn{
+  margin-top: 50px;
+    display: flex;
+gap:30px;
+cursor: pointer;
+padding-left: 25px;
+
+
+}
+
+.banner-btn button{
+    background-color: black;
+    color: white;
+    border: 1px solid gray;
+    font-size: 11px;
+    padding: 11px 30px;
+    border-radius: 2px;
+   
+}
+
+.banner-btn button:hover{
+    background-color: red;
+    border: none;
+}
+
+
+.banner-btn button i{
+    padding-left: 13px;
+}
+
+
+
+/* BANNNER:1200 */
+
+@media(max-width:1200px){
+
+    .landing-banner .container {
+    
+        max-width: 100%;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+
+.banner-btn{
+  
+padding-left: 15px;
+
+
+}
+
+
+    
+}
+
+
+
+/* BANNER:992 */
+
+@media(max-width:992px){
+
+
+.bannerimg{
+    height: 370px;
+   object-fit: cover;
+
+}
+
+     .banner-text{
+    padding-left: 30px !important;
+   
+
+}
+
+.banner-content h1{
+
+     font-size: 40px;
+  
+}
+
+.banner-subtitle{
+   
+    font-size: 47px;
+  
+}
+
+
+.banner-content p{
+   
+    font-size: 14px;
+
+}
+
+
+.banner-btn{
+  
+padding-left: 7px;
+
+
+}
+
+.banner-btn button{
+    
+    font-size: 10px;
+    padding: 10px 25px;
+  
+   
+}
+
+}
+
+
+
+
+
+/* BANNER:768 */
+
+@media (max-width:768px){
+
+
+.bannerimg{
+    height: 350px;
+  object-fit: cover;
+   
+
+}
+
+ .banner-content h1{
+  
+  font-size: 45px;
+     padding-top: 15px;
+    
+    
+}
+
+
+.banner-subtitle{
+    
+    font-size: 60px;
+}
+
+.banner-content p{
+    padding-top: 20px;
+    font-size: 16px;
+  
+
+}
+
+.banner-btn{
+  margin-top: 30px;
+padding-left: 25px;
+
+} 
+
+.banner-btn button{
+  
+    font-size: 11px;
+    padding: 11px 40px;
+    border-radius: 2px;
+   
+}
+   
+}
+
+
+
+/* BANNER:576 */
+
+@media (max-width:576px){
+
+
+.bannerimg{
+    height: 320px;
+
+
+}
+
+     .banner-text{
+    padding-left: 23px !important;
+   
+
+}
+
+ .banner-content h1{
+  
+  font-size: 32px;
+     padding-top: 15px;
+    
+    
+}
+
+
+.banner-subtitle{
+    
+    font-size: 42px;
+}
+
+.banner-content p{
+    padding-top: 15px;
+    font-size: 13px;
+  
+
+}
+
+.banner-btn{
+margin-top: 20px;
+padding-left: 0px;
+flex-direction: column;
+gap:15px
+} 
+
+.banner-btn button{
+ 
+    font-size: 10px;
+    padding: 9px 20px;
+    border-radius: 2px;
+   
+}
+
+.banner-btn button i{
+    padding-left: 10px;
+}
+   
+}
+
+
+/* BANNER FINISHED */
+
+
+
+

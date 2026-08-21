@@ -58,8 +58,12 @@ else{
     }
 
 return(
-<>
-<h1>login page</h1>
+
+    <div className="container">
+
+{/* <div className="row"> */}
+
+    <h1>login page</h1>
 
 <form>
 <label>enter email<input type="email" onChange={(e)=>setloginem(e.target.value)}></input></label><br/>
@@ -68,8 +72,9 @@ return(
 
 
 </form>
+{/* </div> */}
 
-</>
+    </div>
 
 
 )

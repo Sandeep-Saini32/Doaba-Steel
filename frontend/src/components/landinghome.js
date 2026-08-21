@@ -40,10 +40,65 @@ else{
 
 return(
 <>
-<h1>user home page</h1>
+
+<section className="landing-banner">
 
 <div className="container">
 
+  <div className="row banner-row">
+
+
+<div className="col-md-6">
+
+<img src="/images/welding-banner.jpg" className="bannerimg"></img>
+
+</div>
+
+
+<div className="col-md-6  banner-text">
+
+
+<div className="banner-content">
+
+<h1>STONGER STEEL,<br/>
+<span className="banner-subtitle">STONGER FUTURE</span>
+</h1>
+
+<p>
+We specialize in high-quality steel fabrication,
+welding works, gates, grills, doors, windows,
+railings and custom metal solutions.
+</p>
+</div>
+
+
+<div className="banner-btn">
+
+<button>VIEW PRODUCTS <i class="fa-solid fa-arrow-right" style={{color:"rgb(255, 212, 59);"}}></i></button>
+<button>CONTACT US <i class="fa-solid fa-arrow-right" style={{color:"rgb(255, 212, 59);"}}></i></button>
+</div>
+
+
+</div>
+
+
+
+  </div>
+
+
+
+</div>
+
+
+
+
+</section>
+
+
+
+<div className="container">
+
+<h1>user home page</h1>
 <div className="row">
 
 
@@ -56,7 +111,7 @@ savepro.map((item,index)=>(
 
 <img
 src={`http://localhost:9000/${item.propic}`}
-width={"100px"}
+width={"150px"}
 
 />  
 <p>{item.proname}</p>  
@@ -111,38 +166,6 @@ width={"100px"}
 
   </div>
 </div>
-
-
-{/* 
-<header>
-
-<nav>
-
-<div className="container-fluif">
-
-<div className="row">
-
-    <div class="col-lg-8 bg-primary text-white p-5">
-      Header
-    </div>
-
-    <div class="col-lg-4 bg-warning p-5">
-      Sidebar
-    </div>
-
-
-</div>
-
-
-</div>
-
-
-</nav>
-
-
-</header> */}
-
-
 
 
 

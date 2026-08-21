@@ -1,4 +1,4 @@
-import { useContext, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { Usercontext } from "./usercontext"
 
@@ -27,6 +27,26 @@ export const Userheader=()=>{
  }
 
 
+ useEffect(()=>{
+
+  if(sidebaropen){
+document.body.style.overflow="hidden"
+
+  }
+  else{
+    document.body.style.overflow="auto"
+
+  }
+
+  return()=>{
+document.body.style.overflow="auto"
+
+  }
+
+
+ },[sidebaropen])
+
+
 return(
 <>
 
@@ -36,10 +56,12 @@ return(
 
 <div className="container-fluid">
 
-<div className="row bg-dark head-row  ">
+<div className="row head-row  ">
 
 
-    <div class="col-lg-4 col-md-6">
+{/* 1st div */}
+
+    <div className=" col-lg-4 col-md-6 ">
 
 <div className="logo-section">
 <i className="fa-solid fa-bolt bolt-icon"></i>
@@ -59,35 +81,42 @@ return(
 </div>
 </div>
 
+{/* CENTER DIV */}
    
-    <div class="col-lg-5 col-md-3 nav-link">
+    <div class=" col-lg-5 col-md-3  nav-link">
 
      <ul className="nav-name d-flex list-unstyled  ">
 <li><Link to={"/"}>Home</Link></li>
 <li><Link to={"/shop"}>Shop</Link></li>
 <li><Link to={"/about"}>About Us</Link></li>
-<li><Link to={"/signup"}>Account<i class="fa-solid fa-caret-down"></i> </Link>
 
-<div className="acount-drop">
+ <li className="account-head">Account<i className="fa-solid fa-caret-down"></i>
+                                
+                                    <div class="account-drop">
+                                        <ul class="acc-drop-list list-unstyled">
+                                      <li>
+                                                 <Link to={"/login"}>Login</Link>
+                                            </li>
+                                            <li>
+                                                <Link to={"/signup"}>Registration</Link>
+                                            </li>
 
-<ul className=" list-unstyled">
-
-<li><Link to={"/login"}Login></Link></li>
-<li><Link to={"/signup"}Registration></Link></li>
-
-</ul>
-
-</div>
+                                         </ul>
+                                    </div>
+                                    </li>
 
 
-</li>
+
+
 <li><Link to={"/contact"}>Contact Us</Link></li>
 </ul>
 
  </div>
 
 
- <div class="col-lg-3 col-md-3 nav-user d-flex align-items-center  px-5">
+{/* 3rd DIV */}
+
+ <div class="col-lg-3 col-md-3 nav-user d-flex align-items-center">
 
 
 <div className="nav-right">
@@ -176,31 +205,6 @@ return(
     Welcome : <b>{name ? name : "Guest"}</b>
 </h6>
 
-{/* <div className="sidebar-top">
-  <h1>DOABA</h1>
-
-<button className="loginbtn">
-  Login<i className="user-icon fa-solid fa-user" ></i>
-</button>
-
-</div> */}
-
-
-{/* <h6 className="welcome-text">
-  Welcome: <b>{name || "Guest"}</b>
-
-  {name && (
-    <span>
-      <button className="logbtn" onClick={logoutfc}>
-        <i
-          className="fa-solid fa-right-from-bracket"
-        
-        ></i>
-      </button>
-    </span>
-  )}
-</h6> */}
-
 
     <div className="sidebar-link">
 
@@ -221,20 +225,15 @@ return(
 
 </div>
 
-
-
-
 </div>
 
-
-
-
 </>
-
-
 )
-
 }
+
+
+
+
 
 
 

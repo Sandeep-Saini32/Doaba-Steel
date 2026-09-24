@@ -124,7 +124,7 @@ return(
     {/* <div className="top-user"> */}
 
 <h6 className="welcome-text">
-  Welcome: <b>{name || "Guest"}</b>
+  Welcome : <b>{name || "Guest"}</b>
 
   {name && (
     <span>

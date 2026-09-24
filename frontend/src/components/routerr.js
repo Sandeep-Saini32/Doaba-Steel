@@ -16,6 +16,7 @@ import { Usercontext } from "./usercontext"
 import { About } from "./about"
 import { Wishlist } from "./wishlist"
 import { Cart } from "./cart"
+import { Shopdetail } from "./shopdetail"
 
 export const Routerr=()=>{
 
@@ -39,6 +40,7 @@ return(
 <Route  path="about" element={<About/>}/>
 <Route  path="wishlist"element={<Wishlist/>} />
 <Route  path="cart"element={<Cart/>} />
+<Route  path="shopdetail"element={<Shopdetail/>} />
 
 
 </Routes>

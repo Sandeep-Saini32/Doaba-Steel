@@ -35,16 +35,6 @@ return(
 
 <div className="container-fluid">
 
-<div className="row admin-row">
-
-<div className="col-lg-12 admin-top">
-
-  <h6>Admin Panel</h6>
-
-</div>
-
-</div>
-
 <div className="row bg-dark head-row  ">
 
     <div class=" col-lg-4 col-md-6 ">

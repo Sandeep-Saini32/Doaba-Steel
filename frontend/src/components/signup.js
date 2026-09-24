@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 export const Signup=()=>{
 
@@ -42,7 +42,25 @@ else{
 
 return(
 <>
-<h1>Registration</h1>
+<section className="page-banner">
+<div className="container">
+  <div className="row page-row">
+
+   <div className="col-12 page-content">
+    
+    <h1>Registration</h1>
+    <p><Link to={"/"}><span className="home-text">Home</span></Link>
+      <i className="fa-solid fa-greater-than "></i> 
+      Registration</p>
+    
+    </div> 
+
+  </div>
+
+</div>
+
+
+</section>
 
 <form>
 

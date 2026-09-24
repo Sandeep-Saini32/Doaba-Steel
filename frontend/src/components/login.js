@@ -1,5 +1,5 @@
 import { useContext, useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { Usercontext } from "./usercontext"
 
 export const Login=()=>{
@@ -59,11 +59,35 @@ else{
 
 return(
 
+    <>
+    
+ <section className="page-banner">
+<div className="container">
+  <div className="row page-row">
+
+   <div className="col-12 page-content">
+    
+    <h1>Login</h1>
+    <p><Link to={"/"}><span className="home-text">Home</span></Link>
+      <i className="fa-solid fa-greater-than "></i> 
+      Login</p>
+    
+    </div> 
+
+  </div>
+
+</div>
+
+
+</section>
+   
+
+
     <div className="container">
 
 {/* <div className="row"> */}
 
-    <h1>login page</h1>
+   
 
 <form>
 <label>enter email<input type="email" onChange={(e)=>setloginem(e.target.value)}></input></label><br/>
@@ -75,6 +99,11 @@ return(
 {/* </div> */}
 
     </div>
+
+
+    
+    </>
+    
 
 
 )

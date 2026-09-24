@@ -1,0 +1,66 @@
+.page-banner{
+    background-color: black;
+    border-bottom: 1px solid lightgray;
+    padding: 60px 0;
+}
+
+.page-row{
+display: flex;
+justify-content: center !important;
+}
+
+.page-banner {
+    text-align: center;
+    color: white;
+  
+}
+
+
+.page-banner h1{
+    color: red;
+     font-family: "Oswald", sans-serif;
+     font-size: 50px;
+     /* padding-top: 30px; */
+}
+
+
+.fa-greater-than {
+margin: 10px 8px;
+    font-size: 8px;
+  
+}
+
+.home-text{
+    color: white;
+cursor: pointer;
+}
+
+.page-content p a{
+    text-decoration: none;
+}
+
+.home-text:hover{
+    color: red;
+    border-bottom: solid 2px red;
+    
+}
+
+.page-content p{
+    font-size: 14px;
+}
+
+
+@media(max-width:576px){
+    
+    .page-banner{
+   
+    padding: 55px 0;
+}
+
+.page-banner h1{
+  
+     font-size: 48px;
+   
+}
+    
+}

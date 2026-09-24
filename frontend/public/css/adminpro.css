@@ -1,0 +1,619 @@
+
+.pro-form{
+  margin-top: 20px;
+
+}
+
+.form-row label{
+  width: 100%;
+}
+
+.catbox {
+  position: relative;
+}
+
+
+.catname-text{
+  width: 100%;
+  appearance: none;
+  padding: 8px;
+  padding-right: 120px;
+  padding-left: 10px;
+   border: 2px solid lightgrey;
+  border-radius: 5px ;
+  
+  
+}
+
+.fa-angle-down{
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+
+}
+
+.protext-box{
+  width: 100% !important;
+  padding: 8px;
+  padding-right: 60px;
+ border: 2px solid lightgrey;
+    border-radius: 5px ;
+}
+
+.proprice-box{
+  width: 100% !important;
+  padding: 8px;
+  padding-right: 60px;
+ border: 2px solid lightgrey;
+    border-radius: 5px ;
+}
+
+
+
+.propic-box{
+  width: 100% !important;
+    padding: 8px;
+  padding-right: 0px;
+  border: 2px solid lightgray;
+   border-radius: 5px ;
+}
+
+
+.prodetail-box {
+  width: 100%; 
+ padding: 8px;
+ height: 100px;
+
+  border: 2px solid lightgray;
+   border-radius: 5px ;
+   resize: none;
+   
+ 
+}
+
+
+
+.prosubmit-btn button{
+  background-color: black;
+  color: white;
+padding: 10px 20px;  
+  margin-top: -30px !important;
+
+    border: none;
+  border-radius: 5px;
+
+}
+
+.prosubmit-btn button:hover{
+  background-color: red;
+}
+
+
+.proform-line{
+  border: 1px solid grey;
+
+}
+
+
+
+/* 1200PX */
+
+ @media(max-width:1200px){
+
+    .pro-form .container {
+    
+        max-width: 100%;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+
+.catname-text{
+
+  padding-right: 78px;
+  padding-left: 10px;
+    
+}
+
+.protext-box{
+
+  padding: 8px;
+  padding-right:20px;
+
+}
+
+.proprice-box{
+
+  padding: 8px;
+  padding-right:20px;
+
+}
+
+.propic-box{
+  width: 100%;
+    padding: 8px;
+  padding-right:0px ;
+
+}
+} 
+
+  
+/* 992PX */
+
+@media(max-width:992px){
+
+.catname-text{
+
+  padding-right: 85px;
+   padding-left: 10px;
+
+
+}
+
+.protext-box{
+
+  padding: 8px;
+  padding-right:20px;
+
+}
+
+.proprice-box{
+
+  padding: 8px;
+  padding-right:70px;
+
+}
+
+.propic-box{
+  width: 100%;
+    padding: 12px;
+  padding-right:70px ;
+
+}
+
+
+.prosubmit-btn button{
+margin-top: 35px !important;
+padding: 15px 45px;  
+
+
+}
+
+}
+
+
+
+/* 768PX */
+
+@media(max-width:768px){
+
+.catname-text{
+
+  padding-right: 98px;
+   padding-left: 10px;
+font-size: 15px;
+
+}
+
+.fa-angle-down{
+ font-size: 13px;
+
+}
+
+.protext-box{
+  width: 100%;
+ 
+
+  padding: 8px;
+  padding-right:40px;
+  font-size: 14px;
+
+}
+
+.proprice-box{
+width: 100%;
+  padding: 8px;
+  padding-right:40px;
+  font-size: 14px;
+
+}
+
+.propic-box{
+  width: 100%;
+    padding: 12px;
+  padding-right:0px ;
+ font-size: 12px;
+
+}
+
+
+.prodetail-box {
+  width: 100%; 
+ padding: 8px;
+ height: 80px;
+
+font-size: 13px;
+ 
+}
+
+.prosubmit-btn button{
+margin-top: 0px !important;
+padding: 15px 30px; 
+font-size: 15px;
+}
+
+}
+
+
+
+/* 576PX */
+
+@media(max-width:576px){
+
+.prosubmit-btn button{
+  width: 100%;
+
+padding: 15px 30px; 
+font-size: 15px;
+}
+
+
+}
+
+
+
+
+/* TABLE STARTED: */
+
+
+
+/* PRODUCT LIST CSS: */
+
+.pro-table{
+width: 100%;
+border: 1px solid lightgray;
+
+}
+
+
+
+.img-head{
+  width: 10%;
+}
+
+.category-head{
+  width: 10%;
+}
+
+.name-head{
+  width: 16%;
+}
+
+.size-head {
+  width: 9%;
+}
+
+.price-head {
+  width: 9%;
+}
+
+.details-head{
+  width: 25%;
+}
+
+.date-head{
+  width: 13%;
+}
+
+.action-head{
+  width: 8%;
+}
+
+
+.pro-table td:nth-child(6) {
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+
+.pro-table th{
+  border: 1px solid lightgray;
+  padding: 12px;
+  text-align: center;
+}
+
+
+.pro-table td{
+  border: 1px solid lightgray;
+  padding: 12px 6px;
+  text-align: center;
+}
+
+
+
+
+.table-pro-img{
+ 
+  width: 100%px;
+  height: 150px;
+object-fit: contain;
+
+
+}
+
+.pro-search-box{
+ gap: 15px;
+  justify-content: flex-end;
+
+}
+
+.pro-search-box input{
+padding-left: 10px;
+height: 30px;
+border-radius: 2px;
+border: 1px solid lightgray;
+}
+
+.pro-search-box select{
+padding-left: 10px;
+height: 30px;
+border-radius: 2px;
+border: 1px solid lightgray;
+
+}
+
+
+
+.form-btn{
+  padding: 0px !important;
+
+}
+
+.form-btn button{
+
+background-color: white;
+color: black;
+border: 2px solid lightgray;
+margin: 0px 3px;
+font-size: 15px;
+border-radius: 3px;
+}
+
+.form-btn button:hover{
+cursor: pointer;
+color: red;
+border-color: red;
+
+}
+
+
+.form-ruppee i{
+/* transform: scale(0.9); */
+padding: 0px !important;
+}
+
+
+.form-ruppee {
+padding: 0px 1px!important;
+}
+
+
+
+/* TABLE: 1200PX  */
+
+ @media(max-width:1200px){
+
+    .pro-list .container {
+    
+        max-width: 100%;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+
+  }
+
+
+
+
+/* FOR MOBILE CARD : SM,MD */
+
+  /* MOBILE CARD: 992PX+ */
+
+
+
+.mobile-pro-card{
+  border:1px solid lightgray;
+  padding: 12px;
+}
+
+
+.mobile-pro-img{
+ 
+  width: 100%;
+  height: 250px;
+object-fit: contain;
+
+}
+
+.mobile-logo{
+  padding: 0px !important;
+   text-align: center;
+
+}
+
+.mobile-date{
+  padding: 0px !important;
+  font-size: 14px;
+
+
+}
+
+
+.mobileform-btn button{
+
+background-color: white;
+color: black;
+border: 2px solid lightgray;
+margin: 0px 5px;
+font-size: 16px;
+border-radius: 3px;
+}
+
+.mobileform-btn button:hover{
+cursor: pointer;
+color: red;
+border-color: red;
+
+}
+
+
+.pro-name-category{
+  margin: 0px;
+  
+}
+
+.pro-size-price {
+  margin-top: 8px;
+
+  display: flex;
+  gap: 8px;
+}
+
+
+
+/* MOBILE CARD : 768PX+   */
+  
+  @media(max-width:768px){
+
+
+.pro-search-box{
+ gap: 12px;
+  justify-content: flex-end;
+
+}
+
+.pro-search-box input{
+  font-size: 13px;
+
+}
+
+.pro-search-box select{
+  font-size: 12px;
+
+}
+
+ .mobile-pro-img{
+ 
+  width: 100%;
+  height: 200px;
+object-fit: contain;
+
+}
+
+
+    .mobile-date{
+  font-size: 10px;
+  margin-bottom:7px;
+
+}
+
+.mobileform-btn button{
+
+margin: 0px 5px;
+font-size: 15px;
+
+}
+
+
+.pro-mobile-detail{
+  padding-top: 0px;
+   font-size: 15px;
+
+}
+
+
+
+    
+  }
+
+
+
+  /* MOBILE CARD: 576PX+ */
+
+
+  @media (max-width: 576px) {
+
+
+ .mobile-pro-img{
+ 
+  width: 100%;
+  height: 150px;
+object-fit: contain;
+
+}
+
+
+
+.pro-search-box{
+ gap: 12px;
+  justify-content: left;
+  margin-bottom: 10px;
+
+}
+
+.pro-search-box input{
+  font-size: 13px;
+
+}
+
+.pro-search-box select{
+  font-size: 12px;
+
+}
+
+  .pro-size-price {
+    flex-direction: column ;
+    gap: 0px;
+  }
+
+  .pro-size-price p {
+margin: 3px;
+  
+  }
+
+.pro-mobile-detail{
+  padding-top: 15px;
+   font-size: 14px;
+
+}
+
+ .mobile-logo{
+  text-align: left;
+ }
+
+
+ .mobile-date{
+       margin-top: 5px;
+       margin-bottom: 10px;
+      margin-left: 5px; 
+  font-size: 12px;
+
+}
+
+
+.mobileform-btn{
+  text-align:left;
+  margin-left: 10px;
+  padding-left: 0px !important;
+
+
+}
+
+}

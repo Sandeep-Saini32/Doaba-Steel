@@ -11,7 +11,7 @@ app.use(exprees.json())
 app.use("/uploads",exprees.static("uploads"))
 
 const path = require("path")
-const { runInNewContext } = require("vm")
+// const { runInNewContext } = require("vm")
 
 
 
@@ -28,6 +28,10 @@ mongoose.connect("mongodb://127.0.0.1:27017/Doaba-steel-app")
 .catch(()=>{
     console.log("not connected to db")
 })
+
+
+
+
 
 // for signup
 
@@ -124,7 +128,9 @@ const upload=multer({storage})
 
 // saving product info
 const productSchema=mongoose.Schema({
+procategory:String,    
 proname:String,
+prosize:String,
 proprice:String,
 prodetail:String,
 propic:String,
@@ -148,7 +154,10 @@ else{
 
 
 let newrecord= new productModel({
+
+procategory:req.body.procategory,    
 proname:req.body.proname,
+prosize:req.body.prosize,
 proprice:req.body.proprice,
 prodetail:req.body.prodetail,
 propic:pic,
@@ -233,7 +242,9 @@ pic=req.body.oldpic
 const result = await productModel.updateOne({_id:req.params.id},{
 
     $set:{
+        procategory:req.body.procategory,
         proname:req.body.proname,
+        prosize:req.body.prosize,
         proprice:req.body.proprice,
         prodetail:req.body.prodetail,
         propic:pic
@@ -258,6 +269,7 @@ else{
 const catSchema=mongoose.Schema({
 catname:String,
 catpic:String,
+cataddedon:String
 
 
 })
@@ -277,7 +289,7 @@ else{
 let newrecord= new catModel({
 catname:req.body.catname,
 catpic:pic,
-
+cataddedon: new Date()
 
 })
 
@@ -374,5 +386,28 @@ if(catresult.modifiedCount==1){
 else{
     res.send({statuscode:0})
 }
+
+})
+
+
+
+// for getting productdetail on shopdetail page:
+
+app.get("/api/getproductdetail/:id",async(req,res)=>{
+
+
+  const getproductdetail=await productModel.findOne({_id:req.params.id})
+
+  if(getproductdetail){
+    res.send({statuscode:1,alldata:getproductdetail})
+console.log(getproductdetail)
+
+  }
+
+
+else{
+    res.send({statuscode:0})
+}  
+
 
 })

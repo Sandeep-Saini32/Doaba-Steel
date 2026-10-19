@@ -1,10 +1,12 @@
 import { useEffect } from "react"
 import { useState } from "react"
-import { useSearchParams } from "react-router-dom"
+import { Link, useNavigate, useSearchParams } from "react-router-dom"
 
 export const Shopdetail=()=>{
 
 //  for product detail:   
+
+const navigate=useNavigate()
 
 const [shopname,setshopname]=useState("")
 const [shopprice,setshopprice]=useState("")
@@ -12,6 +14,10 @@ const [shopsize,setshopsize]=useState("")
 const [shopdetail,setshopdetail]=useState("")
 const [shoppic,setshoppic]=useState("")
 const[shopcat,setshopcat]=useState("")
+const [shopqunt,setshopqunt]=useState(1)
+
+
+
     
 // const[userid,setuserid]=useState("")
 
@@ -51,6 +57,7 @@ setshopdetail(spro.alldata.prodetail)
 setshoppic(spro.alldata.propic)
 setshopcat(spro.alldata.procategory)
 
+
 }
 
 
@@ -61,9 +68,47 @@ else{
 
 }
 
+}
 
 
-}    
+
+// for saving these deatils for  cart page
+
+const addcart=async()=>{
+
+const savecartdata={shoppic,shopname,shopprice,shopqunt}
+
+const cartresult= await fetch("http://localhost:9000/api/savecartinfo",{
+method:"post",
+body:JSON.stringify(savecartdata),
+headers:{
+  "content-type":"application/json;charset=utf-8"
+}
+
+})
+
+if(cartresult.ok){
+const  cr= await cartresult.json()
+if(cr.statuscode===1){
+    alert("cart data saved")
+}
+
+else{
+    alert("cart data not saved")
+}
+
+}
+
+else{
+    alert("cart save error")
+}
+
+
+}
+
+
+
+
 
 return(
 <>
@@ -118,12 +163,14 @@ Size : {shopsize}<br/>
 Availability :<span className="detail-stock">In Stock</span>
 </p>
 
-<button className="qunt">Quantity :<span className="qunt1">1</span></button>
-
+<button className="qunt">Quantity :<span className="qunt1">{shopqunt}</span></button>
 </div>
 
 <div className="detail-buy">
-<button>Add To Cart <i class="fa-solid fa-cart-shopping"></i></button><br/>
+<Link to={`/cart/?id=${id}`}>
+
+<button onClick={addcart}>Add To Cart <i class="fa-solid fa-cart-shopping"></i></button><br/>
+</Link>
 <button>Buy Now <i class="fa-solid fa-bag-shopping"></i></button><br/>
 <button>Add To Wishlist<i class="fa-solid fa-heart"></i></button>
 </div>

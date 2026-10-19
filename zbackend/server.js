@@ -47,11 +47,11 @@ role:{
 
 })
 
-const signupModel=mongoose.model("signup",signupSchema)
+const signupmodel=mongoose.model("signup",signupSchema)
 
 app.post("/api/signup",async(req,res)=>{
 
-const saveuser=await signupModel({
+const saveuser=await signupmodel({
 name:req.body.name,
 email:req.body.email,
 pass:req.body.pass,
@@ -78,7 +78,7 @@ else{
 
 app.post("/api/loginpage",async(req,res)=>{
 
-const showuser=await signupModel.findOne({email:req.body.loginem})
+const showuser=await signupmodel.findOne({email:req.body.loginem})
 
 
 if(!showuser){
@@ -138,7 +138,7 @@ addedon:String
 
 })
 
-const productModel=mongoose.model("product",productSchema)
+const productmodel=mongoose.model("product",productSchema)
 
 app.post("/api/addproduct",
              upload.single("propic"),async(req,res)=>{
@@ -153,7 +153,7 @@ else{
 }
 
 
-let newrecord= new productModel({
+let newrecord= new productmodel({
 
 procategory:req.body.procategory,    
 proname:req.body.proname,
@@ -179,7 +179,7 @@ else{
 // getting product
 app.get("/api/getsavepro",async(req,res)=>{
 
-    const savepro= await productModel.find()
+    const savepro= await productmodel.find()
 
     if(savepro){
         res.send({statuscode:1,allproduct:savepro})
@@ -197,7 +197,7 @@ app.get("/api/getsavepro",async(req,res)=>{
 
 app.delete("/api/deleteproduct/:id",async(req,res)=>{
 
-const dellresult=await productModel.deleteOne({_id:req.params.id})
+const dellresult=await productmodel.deleteOne({_id:req.params.id})
 console.log(dellresult)
 
 if(dellresult.deletedCount===1){
@@ -239,7 +239,7 @@ pic=req.body.oldpic
     }
 }
 
-const result = await productModel.updateOne({_id:req.params.id},{
+const result = await productmodel.updateOne({_id:req.params.id},{
 
     $set:{
         procategory:req.body.procategory,
@@ -274,7 +274,7 @@ cataddedon:String
 
 })
 
-const catModel=mongoose.model("category",catSchema)
+const catmodel=mongoose.model("category",catSchema)
 
 app.post("/api/addcategory",upload.single("catpic"),async(req,res)=>{
 
@@ -286,7 +286,7 @@ else{
     pic=req.file.path
 }
 
-let newrecord= new catModel({
+let newrecord= new catmodel({
 catname:req.body.catname,
 catpic:pic,
 cataddedon: new Date()
@@ -309,7 +309,7 @@ else{
 
 app.get("/api/getsavecat",async(req,res)=>{
 
-const getcat= await catModel.find()
+const getcat= await catmodel.find()
 
 if(getcat){
     res.send({statuscode:1,allcategory:getcat})
@@ -326,7 +326,7 @@ else{
 
 app.delete("/api/deletecategory/:id",async(req,res)=>{
 
-    const dellcatresult=await catModel.deleteOne({_id:req.params.id})
+    const dellcatresult=await catmodel.deleteOne({_id:req.params.id})
     console.log(dellcatresult)
 
   if(dellcatresult.deletedCount===1){
@@ -368,7 +368,7 @@ if(req.body.oldcatpic){
 
 }
 
-const catresult=await catModel.updateOne({_id:req.params.id},{
+const catresult=await catmodel.updateOne({_id:req.params.id},{
 
 $set:{
 
@@ -390,13 +390,12 @@ else{
 })
 
 
-
-// for getting productdetail on shopdetail page:
+// for getting product deatil  on shopdetail page:
 
 app.get("/api/getproductdetail/:id",async(req,res)=>{
 
 
-  const getproductdetail=await productModel.findOne({_id:req.params.id})
+  const getproductdetail=await productmodel.findOne({_id:req.params.id})
 
   if(getproductdetail){
     res.send({statuscode:1,alldata:getproductdetail})
@@ -411,3 +410,142 @@ else{
 
 
 })
+
+
+
+
+
+
+// for saving cartdetails on prodeatil page:
+
+const cartSchema= mongoose.Schema({
+shoppic:String,    
+shopname:String,
+shopprice:Number,
+shopqunt:Number,
+
+})
+
+
+const cartmodel= mongoose.model("cart",cartSchema)
+
+app.post("/api/savecartinfo",async(req,res)=>{
+
+const cartresult=cartmodel({
+ 
+ shoppic:req.body.shoppic,   
+shopname:req.body.shopname,
+shopprice:req.body.shopprice,
+shopqunt:req.body.shopqunt
+
+})
+
+const cresponse= await cartresult.save()
+
+if(cresponse){
+    res.send({statuscode:1})
+}
+
+
+else{
+    res.send({statuscode:0})
+}
+
+})
+
+
+
+
+// for getting savecart on cart page:
+
+app.get("/api/getcart/:id",async(req,res)=>{
+
+
+  const getproductdetail=await cartmodel.find()
+
+  if(getproductdetail){
+    res.send({statuscode:1,
+        allcartdata:getproductdetail})
+console.log(getproductdetail)
+
+  }
+
+
+else{
+    res.send({statuscode:0})
+}  
+
+
+})
+
+
+// for cart delete
+app.delete("/api/delcart/:id",async(req,res)=>{
+
+    const proid={_id:req.params.id}
+ const delresult=await cartmodel.deleteOne({_id:req.params.id})
+ console.log(proid)
+ console.log(delresult)   
+ if(delresult.deletedCount===1){
+    res.send({statuscode:1})
+ }   
+
+else{
+    res.send({statuscode:0})
+}
+
+})
+
+
+
+// FOR CLEARING FULL CART:
+
+app.delete("/api/clearcart",async(req,res)=>{
+
+    try{
+
+        const clearresult= await cartmodel.deleteMany({})
+if(clearresult.deletedCount){
+    res.send({statuscode:1})
+}
+
+else{
+    res.send({statuscode:0})
+}
+
+}
+
+catch(error){
+    console.log(error)
+res.send({statuscode:0})
+
+}
+
+
+})
+
+
+
+
+
+
+// for updation in savecart:
+
+app.put("/api/updatecart/:id",async(req,res)=>{
+try{
+    const id=req.params.id
+const {shopqunt}=req.body
+
+await cartmodel.findByIdAndUpdate(id,{shopqunt})
+
+res.send({statuscode:1})
+
+}
+catch(error){
+    console.log(error)
+   res.send({statuscode:0}) 
+}
+
+})
+
+

@@ -1,0 +1,821 @@
+
+.cart-list{
+    background-color: black;
+    padding-top: 20px;
+
+}
+
+.cartboxses{
+    border: 1px solid lightgray;
+    width: 100%
+
+}
+
+
+.cart-table{
+    border-bottom: 1px solid lightgray ;
+    width: 100%;
+    /* table-layout: fixed; */
+  
+  
+
+}
+
+.cart-table thead{
+  
+    border-bottom: 1px solid lightgray;
+
+}
+
+.cart-table tr{
+    color: white;
+    border-bottom: 1px solid lightgray;
+
+}
+
+
+
+.cart-table tbody{
+    color: lightgray;
+
+}
+
+
+
+ @media(max-width:1200px){
+
+    .cart-list .container {
+    
+        max-width: 100%;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+}
+
+
+
+/* CART LEFT */
+
+
+.cartpro-head{
+    width: 45%;
+   padding-right: 100px !important;
+}
+
+
+.cartpp-head{
+    width: 15%;
+}
+
+
+.cartq-head{
+    width: 15%;
+
+}
+
+.carttot-head{
+    width: 25%;
+
+}
+
+
+
+.cart-table th{
+ 
+  padding: 10px;
+  text-align: center;
+}
+
+
+.cart-table td{
+ 
+  padding: 5px;
+  text-align: center;
+}
+
+
+.cart-namebox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+gap:8px;
+}
+
+.cart-name h6{
+        font-size: 15px;
+ }
+
+.cartimg{
+    height: 140px;
+    width: 160px;
+    justify-content: center;
+  margin: 7px 0px;
+object-fit: cover;
+border-radius: 5px;
+}
+
+
+
+.cartremo-btn{
+    color: red;
+    font-size: 13px;
+background-color:transparent;
+border: none;
+
+}
+
+
+.cartremo-btn i{
+    padding-left: 8px;
+    font-size: 11px;
+
+}
+
+
+.cartremo-btn:hover{
+    color: red;
+    border-bottom: 1px solid red;
+
+}
+
+
+.cart-price{
+    font-size: 14px;
+}
+
+
+.cartqunt-btn{
+display: flex;
+justify-content:space-between;
+align-items: center;
+width: 80%;
+margin-left: 5px;
+    border: 1px solid lightgray;
+    border-radius: 1px;
+}
+
+/* .quntnum{
+  font-size: 13px; */
+    /* padding: 0px 10px;
+
+} */
+
+
+.cartqunt-btn button{
+
+    border: none;
+
+}
+
+.cart-tot{
+    font-size: 14px;
+
+}
+
+
+.mobile-price {
+    display: none;
+}
+
+
+/* CART BUTTONS: */
+
+.cart-btns{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 290px;
+    justify-content: center;
+}
+
+
+.cartqunt-btn button:hover{
+    background-color: red;
+
+}
+
+
+.cart-shopbtn{
+    background-color: transparent;
+    border: 1px solid lightgrey;
+      border-radius: 2px;
+    color: white;
+   padding: 5px 7px;
+}
+
+.cart-shopbtn i{
+    margin-right: 7px;
+font-size: 14px;
+}
+
+
+
+.cart-shopbtn:hover{
+    background-color: red;
+    border: none;
+   
+}
+
+
+
+.cart-clearbtn{
+    padding: 5px 10px;
+    background-color: transparent;
+    border: 1px solid red;
+    border-radius: 2px;
+    color: red;
+}
+
+
+.cart-clearbtn:hover{
+   
+    background-color:red;
+    border: 1px solid red;
+    color:white;
+}
+
+
+.cart-clearbtn i{
+    font-size: 12px;
+    padding-left: 6px;
+}
+
+
+
+
+
+/* CART RIGHT: ORDER SUMMARY: */
+
+.summ-box{
+  border: 1px solid lightgray;
+  margin-bottom: 20px;    
+
+}
+
+.summ-box h2{
+    padding-top: 3px;
+    padding-left: 5px;
+    color: white;
+}
+
+.summ-table{
+    color: lightgray;
+    border-top: 1px solid lightgray;
+    width: 100%;
+}
+
+.fsttd{
+  padding: 10px 5px;
+}
+
+.tr-ship td {
+    padding: 5px 5px;
+}
+
+
+.secdtr td{
+    padding: 10px 5px;
+
+}
+
+.right-sumtot{
+    font-size: 17px;
+    color: red;
+
+}
+
+
+/* CHECKOUT */
+
+
+.check-btn button{
+    width: 90%;
+    height: 45px;
+   background-color: transparent;
+   color: white;
+   border: 1px solid lightgrey;
+   margin-left: 15px;
+   margin-top: 10px;
+   border-radius: 2px;
+}
+
+.check-btn button:hover{
+   background-color:red;
+   color: white;
+   border:none;
+}
+
+
+
+/* LOGO SECTION */
+
+.logo-sect h5{
+    color: white;
+    padding-top: 15px;
+    padding-left: 5px;
+
+}
+
+
+.cart-logo{
+display: flex;
+    height: 30px;
+    padding-top: 3px;
+  padding-left: 50px;
+  margin-bottom: 10px;
+   gap:10px;
+
+}
+
+.cart-logo img{
+    border-radius: 2px;
+
+}
+
+
+.tr-ship{
+    border-bottom: 1px solid lightgray;
+
+}
+
+
+
+
+
+
+
+
+
+@media(max-width:992px){
+
+
+   /* Adjust table columns */
+
+    .cartpro-head{
+        width: 55%;
+    }
+
+    .cartq-head{
+        width: 20%;
+       
+    }
+
+    .carttot-head{
+        width: 25%;
+    }
+
+
+    /* Product image */
+
+    .cartimg{
+        height: 100px;
+        width: 120px;
+        object-fit: cover;
+    }
+
+
+    /* Product name */
+
+    .cart-name h6{
+        font-size: 14px;
+    }
+
+  /* Show price below product name */
+
+    .mobile-price{
+        display: block;
+        font-size: 12px;
+        padding-top: 3px;
+    }
+
+.cartqunt-btn{
+width:70% !important;
+margin-left: 5px;
+}
+
+ 
+.quntnum{
+        font-size: 11px; 
+     }
+
+
+
+    /* Remove button */
+
+    .cartremo-btn{
+        font-size: 12px;
+    }
+
+.cartremo-btn i{
+    padding-left: 7px;
+    font-size: 10px;
+
+}
+
+
+    /* Hide desktop Price column */
+
+    .cartpp-head,
+    .cart-price{
+        display: none;
+    }
+
+.cartqunt-btn{
+margin:10px;
+width: fit-content;
+font-size: 13px;
+
+}
+
+
+.cart-tot{
+    font-size: 13px;
+
+}
+
+
+.cart-btns{
+  
+    gap: 190px;
+  
+}
+
+
+.cart-shopbtn{
+font-size: 13px;
+   padding: 5px 7px;
+}
+
+.cart-shopbtn i{
+ margin-right: 7px;
+font-size: 12px;
+}
+
+
+.cart-clearbtn{
+    padding: 5px 10px;
+    font-size: 13px;
+}
+
+
+/* RIGHT SIDE ORDER SUMMART: */
+
+
+.summ-box h2{
+    padding-top: 3px;
+    /* padding-left: 3px; */
+   font-size: 26px;
+}
+
+
+
+.fsttd{
+    font-size: 13px;
+  padding: 10px 5px;
+}
+
+
+.fsttd2{
+    font-size: 13px;
+
+}
+
+
+.tr-ship{
+    font-size: 13px;
+    padding: 5px 5px;
+}
+
+
+.secdtr td{
+    font-size: 15px;
+    padding: 10px 5px;
+
+}
+
+
+/* CHECKOUT */
+
+
+.check-btn button{
+    width: 90%;
+    height: 40px;
+font-size: 14px;
+   margin-left: 10px;
+   margin-top: 10px;
+ 
+}
+
+
+
+
+
+/* LOGO SECTION */
+
+.logo-sect h5{
+  font-size: 16px;
+    padding-top: 15px;
+    padding-left: 5px;
+
+}
+
+
+.cart-logo{
+display: flex;
+    height: 25px;
+    padding-top: 3px;
+  padding-left: 30px;
+  margin-bottom: 10px;
+   gap:10px;
+
+}
+
+.cart-logo img{
+    border-radius: 2px;
+
+}
+
+
+
+}
+
+
+
+
+
+@media(max-width:768px){
+
+
+      .cartpro-head{
+        width: 55%;
+    }
+
+    .cartq-head{
+        width: 20%;
+       
+    }
+
+    .carttot-head{
+        width: 25%;
+    }
+  
+
+     .cartimg{
+        height: 120px;
+        width: 160px;
+        object-fit: cover;
+    } 
+
+
+ .cartqunt-btn{
+width:60% !important;
+margin-left: 20px;
+}
+   
+
+.cart-btns{
+  
+    gap: 200px;
+    justify-content: center;
+}
+
+
+.right-side{
+    margin-top: 40px !important;
+   
+}
+
+
+.summ-box h2{
+    padding-top: 3px;
+    padding-left: 5px;
+   font-size: 26px;
+}
+
+
+
+.fsttd{
+  
+  padding: 10px 15px;
+}
+
+
+.fsttd2{
+    font-size: 13px;
+
+}
+
+
+.td-ship,.td-ship2{
+    padding-left: 15px !important;
+
+}
+
+
+.secdtr td{
+    font-size: 15px;
+    padding: 10px 15px;
+  
+
+}
+
+
+.right-sumtot{
+    padding-left:0px !important;
+   
+}
+
+
+
+.check-btn button{
+    width: 90%;
+    height: 40px;
+font-size: 14px;
+   margin-left: 25px;
+   margin-top: 10px;
+ 
+
+}
+
+
+
+/* LOGO SECTION */
+
+.logo-sect h5{
+ 
+    padding-left: 15px;
+
+
+}
+
+
+.cart-logo{
+    height: 40px;
+ padding-left: 120px;
+  margin-bottom: 10px;
+   gap:30px;
+
+}
+
+}
+
+
+
+
+
+
+@media(max-width:576px){
+
+ .cartpro-head{
+        width: 65%;
+        font-size: 15px;
+    }
+
+    .cartq-head{
+        width: 15%;
+          font-size: 15px;
+        
+    }
+
+    .carttot-head{
+        width: 25%;
+          font-size: 20px;
+    }
+
+  
+
+
+  .cartimg{
+    height: 90px;
+    width: 90px;
+  margin: 7px 0px;
+object-fit: cover;
+border-radius: 5px;
+}
+
+
+.cart-namebox{
+gap:7px;
+}
+
+
+.cart-name h6{
+  
+    font-size: 12px;
+}
+
+
+.mobile-price{
+    font-size: 11px;
+}
+
+
+ .cartremo-btn{
+   
+        font-size: 10px;
+    }
+
+.cartremo-btn i{
+    padding-left: 3px;
+    font-size: 8px;
+}
+
+
+ .cartqunt-btn{
+width:70% !important;
+margin-left: 10px;
+}
+   
+
+.cart-tot{
+    font-size: 12px;
+
+}
+
+
+.cart-btns{
+  
+    gap:90px;
+  
+}
+
+.cart-shopbtn{
+font-size: 11px;
+   padding: 5px 7px;
+}
+
+
+.cart-shopbtn i{
+ margin-right: 7px;
+font-size: 10px;
+}
+
+
+
+.cart-clearbtn{
+    padding: 5px 10px;
+    font-size: 11px;
+}
+
+
+.cart-clearbtn i{
+    padding: 5px 7px;
+    font-size: 10px;
+}
+
+
+.summ-box h2{
+    padding-top: 10px;
+    padding-left: 5px;
+   font-size: 25px;
+}
+
+
+
+.fsttd{
+   
+  padding: 10px 15px;
+}
+
+
+.fsttd2{
+    font-size: 13px;
+
+}
+
+.check-btn button{
+    width: 80%;
+    height: 35px;
+    font-size: 13px;
+   margin-left: 30px;
+
+}
+
+
+
+/* LOGO SECTION */
+
+.logo-sect h5{
+ 
+    padding-left: 15px;
+
+
+}
+
+
+.cart-logo{
+    height: 30px;
+ padding-left: 80px;
+  margin-bottom: 10px;
+   gap:15px;
+
+}
+
+
+
+
+
+}
+
+
